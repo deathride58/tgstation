@@ -220,6 +220,8 @@
 			wuv(1, M)
 		if("harm")
 			wuv(-1, M)
+	if(SSresearch.science_tech && is_station_level(z))
+		SSresearch.science_tech.research_points += 0.25
 
 /mob/living/simple_animal/pet/cat/proc/wuv(change, mob/M)
 	if(change)
