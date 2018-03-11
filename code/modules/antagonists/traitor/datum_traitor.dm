@@ -51,7 +51,7 @@
 /datum/antagonist/traitor/remove_innate_effects()
 	if(owner.assigned_role == "Clown")
 		var/mob/living/carbon/human/traitor_mob = owner.current
-		if(traitor_mob && istype(traitor_mob))
+		if(traitor_mob && istype(traitor_mob) && !traitor_mob.mind.has_antag_datum(/datum/antagonist/traitor))
 			traitor_mob.dna.add_mutation(CLOWNMUT)
 
 /datum/antagonist/traitor/on_removal()
