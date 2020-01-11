@@ -2,6 +2,20 @@
 	layer = OBJ_LAYER
 	appearance_flags = TILE_BOUND|PIXEL_SCALE
 
+	//VELOCITY STUFF
+	var/vel_x // x velocity
+	var/vel_y // y velocity
+
+	//intended velocity vars. controls acceleration and deceleration. controlled mostly by input code
+	var/wish_x // intended x acceleration
+	var/wish_y // intended y acceleration
+
+	//these are the variables you wanna touch to control an object's movement
+	var/vel_accelerate = 8 //acceleration of this object in pixels per decisecond. processed before movement
+	var/vel_friction = 2 //deceleration of this object in pixels per decisecond. processed after movement
+	var/vel_maxnaturalspeed = 16 //maximum pixels moved per decisecond that can be reached with this object's own acceleration
+	var/vel_maxspeed = REASONABLE_MAX_VELOCITY //maximum pixels per decisecond that can be reached period.
+
 	// Movement related vars
 	step_size = 32
 	//PIXEL MOVEMENT VARS

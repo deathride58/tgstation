@@ -116,6 +116,7 @@
 #define INIT_ORDER_NETWORKS			45
 #define INIT_ORDER_ECONOMY			40
 #define INIT_ORDER_OUTPUTS			35
+#define INIT_ORDER_VELOCITY			33
 #define INIT_ORDER_ATOMS			30
 #define INIT_ORDER_LANGUAGE			25
 #define INIT_ORDER_MACHINES			20
@@ -166,6 +167,7 @@
 #define FIRE_PRIORITY_CHAT			400
 #define FIRE_PRIORITY_OVERLAYS		500
 #define FIRE_PRIORITY_INPUT			1000 // This must always always be the max highest priority. Player input must never be lost.
+#define FIRE_PRIORITY_VELOCITY		1100 // move over, input. you don't handle the main player movement loop anymore.
 
 // SS runlevels
 

@@ -21,6 +21,14 @@
 	if(istype(J) && (movement_dir || J.stabilizers) && J.allow_thrust(J.consumption, src))
 		return 1
 
+/mob/living/carbon/Login()
+	. = ..()
+	START_VEL_PROCESS(src)
+
+/mob/living/carbon/Logout()
+	. = ..()
+	STOP_VEL_PROCESS(src)
+
 /mob/living/carbon/Move(NewLoc, direct, _step_x, _step_y)
 	. = ..()
 	if(. && !(movement_type & FLOATING)) //floating is easy

@@ -55,6 +55,8 @@
 		return FALSE
 	if(mob.notransform)
 		return FALSE	//This is sota the goto stop mobs from moving var
+	if(mob in SSvelocity.tracked_objects)
+		return FALSE
 
 	var/diagonal_step = (direct & (NORTH|SOUTH)) && (direct & (EAST|WEST))
 	var/step_size

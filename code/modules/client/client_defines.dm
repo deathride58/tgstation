@@ -123,3 +123,6 @@
 	var/keysend_tripped = FALSE
 	///custom movement keys for this client
 	var/list/movement_keys = list()
+
+	var/wish_x
+	var/wish_y

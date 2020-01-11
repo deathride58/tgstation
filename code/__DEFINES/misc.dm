@@ -473,3 +473,8 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 #define FALL_INTERCEPTED		(1<<0) //Stops the movable from falling further and crashing on the ground
 #define FALL_NO_MESSAGE			(1<<1) //Used to suppress the "[A] falls through [old_turf]" messages where it'd make little sense at all, like going downstairs.
 #define FALL_STOP_INTERCEPTING	(1<<2) //Used in situations where halting the whole "intercept" loop would be better, like supermatter dusting (and thus deleting) the atom.
+
+//Velocity defines
+#define REASONABLE_MAX_VELOCITY 64 // (world.icon_size/world.tick_lag)に等しい。壁おすり抜けるのおふせぎます。
+#define START_VEL_PROCESS(AM) SSvelocity.tracked_objects |= AM
+#define STOP_VEL_PROCESS(AM) SSvelocity.tracked_objects -= AM

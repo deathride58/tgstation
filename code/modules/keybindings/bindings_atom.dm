@@ -2,7 +2,7 @@
 // Only way to do that is to tie the behavior into the focus's keyLoop().
 
 /atom/movable/keyLoop(client/user)
-	if(!user.keys_held["Ctrl"] || user.keys_held["Alt"])
+	if(!user.keys_held["Ctrl"] || user.keys_held["Alt"] && !(src in SSvelocity.tracked_objects))
 		var/movement_dir
 		for(var/_key in user.keys_held)
 			movement_dir = movement_dir | user.movement_keys[_key]
