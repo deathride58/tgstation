@@ -475,6 +475,6 @@ GLOBAL_LIST_INIT(pda_styles, sortList(list(MONO, VT, ORBITRON, SHARE)))
 #define FALL_STOP_INTERCEPTING	(1<<2) //Used in situations where halting the whole "intercept" loop would be better, like supermatter dusting (and thus deleting) the atom.
 
 //Velocity defines
-#define REASONABLE_MAX_VELOCITY 64 // (world.icon_size/world.tick_lag)に等しい。壁おすり抜けるのおふせぎます。
+#define REASONABLE_MAX_VELOCITY 64 // equal to (world.icon_size/world.tick_lag). makes sure you cant slip past walls
 #define START_VEL_PROCESS(AM) SSvelocity.tracked_objects |= AM
 #define STOP_VEL_PROCESS(AM) SSvelocity.tracked_objects -= AM
